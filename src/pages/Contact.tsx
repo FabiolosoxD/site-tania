@@ -32,7 +32,7 @@ const Contact = () => {
       <Header />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary to-primary-light text-primary-foreground py-16">
+        <section className="py-16 text-background" style={{background: 'var(--hero-gradient)'}}>
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">Entre em Contacto</h1>
             <p className="text-xl opacity-90 max-w-2xl mx-auto">
@@ -119,8 +119,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold">Morada</h3>
                         <p className="text-muted-foreground">
-                          Rua da Consultoria, nº 123<br />
-                          1000-001 Lisboa<br />
+                          Quinta da Granja N.º13 1ºDrt<br />
+                          6350-226 Almeida<br />
                           Portugal
                         </p>
                       </div>
@@ -130,7 +130,7 @@ const Contact = () => {
                       <Phone className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <h3 className="font-semibold">Telefone</h3>
-                        <p className="text-muted-foreground">+351 XXX XXX XXX</p>
+                        <p className="text-muted-foreground">+351 271 571 234</p>
                       </div>
                     </div>
                     
@@ -138,7 +138,10 @@ const Contact = () => {
                       <Mail className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <h3 className="font-semibold">Email</h3>
-                        <p className="text-muted-foreground">geral@adaoconsultoria.pt</p>
+                        <div className="text-muted-foreground">
+                          <p>Geral: taniamendo83692@gmail.com</p>
+                          <p>Seguros: seguroscomalma@gmail.com</p>
+                        </div>
                       </div>
                     </div>
                     

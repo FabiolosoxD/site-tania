@@ -10,11 +10,11 @@ const Header = () => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link to="/" className="flex items-center space-x-2">
           <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">AC</span>
+            <span className="text-primary-foreground font-bold text-lg">TM</span>
           </div>
           <div>
-            <h1 className="text-xl font-bold text-foreground">Adão Consultoria</h1>
-            <p className="text-xs text-muted-foreground">Contabilidade & Seguros</p>
+            <h1 className="text-xl font-bold text-foreground">Tânia Mendo Lda</h1>
+            <p className="text-xs text-muted-foreground">Gestão & Contabilidade | Seguros</p>
           </div>
         </Link>
 
@@ -41,11 +41,11 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4 text-sm text-muted-foreground">
             <div className="flex items-center space-x-1">
               <Phone className="h-4 w-4" />
-              <span>+351 XXX XXX XXX</span>
+              <span>+351 271 571 234</span>
             </div>
             <div className="flex items-center space-x-1">
               <Mail className="h-4 w-4" />
-              <span>geral@adaoconsultoria.pt</span>
+              <span>taniamendo83692@gmail.com</span>
             </div>
           </div>
           <Button asChild>

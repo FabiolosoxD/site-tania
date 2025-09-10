@@ -25,23 +25,23 @@ const Index = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary to-primary-light text-primary-foreground py-20">
+        <section className="bg-gradient-to-br from-foreground via-foreground to-muted-foreground text-background py-20" style={{background: 'var(--hero-gradient)'}}>
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Consultoria de <span className="text-primary-foreground/90">Excelência</span>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-background">
+                Gestão & Contabilidade de <span style={{background: 'var(--gold-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}} className="font-bold">Excelência</span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 opacity-90">
-                Simplificamos a sua contabilidade e protegemos o seu futuro com soluções de seguros personalizadas
+              <p className="text-xl md:text-2xl mb-8 opacity-90 text-background">
+                Especialistas em gestão contabilística e seguros com autorização do Banco de Portugal
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" variant="secondary">
                   <Link to="/contacto">Marcar Consulta Gratuita</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
-                  <a href="tel:+351XXXXXXX">
+                <Button asChild size="lg" variant="outline" className="border-background/20 text-background hover:bg-background/10">
+                  <a href="tel:+351271571234">
                     <Phone className="mr-2 h-5 w-5" />
-                    Ligar Agora
+                    +351 271 571 234
                   </a>
                 </Button>
               </div>
@@ -96,12 +96,15 @@ const Index = () => {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <Users className="h-16 w-16 text-primary mx-auto mb-6" />
-              <h2 className="text-4xl font-bold mb-6">Sobre a Adão Consultoria</h2>
+              <h2 className="text-4xl font-bold mb-6">Sobre a Tânia Mendo Lda</h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Com mais de 10 anos de experiência no mercado, a Adão Consultoria é a sua parceira de confiança 
-                para todas as necessidades de contabilidade e seguros. A nossa equipa especializada oferece um 
-                atendimento personalizado, garantindo que cada cliente recebe as melhores soluções para o seu 
-                perfil específico.
+                Intermediária de Crédito autorizada pelo Banco de Portugal nº 007771, a Tânia Mendo Lda é a sua 
+                parceira de confiança para todas as necessidades de gestão contabilística e seguros. Oferecemos 
+                um atendimento personalizado e especializado, garantindo que cada cliente recebe as melhores 
+                soluções para o seu perfil específico.
+              </p>
+              <p className="text-sm text-muted-foreground mb-4 font-medium">
+                Intermediária Crédito autorizada pelo Banco de Portugal n° 007771
               </p>
               <div className="grid md:grid-cols-3 gap-8 mt-12">
                 <div className="text-center">
@@ -122,15 +125,15 @@ const Index = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="py-20 bg-primary text-primary-foreground">
+        <section className="py-20 text-background" style={{background: 'var(--hero-gradient)'}}>
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-6">
               Pronto para Começar?
             </h2>
-            <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
-              Agende uma consulta gratuita e descubra como podemos ajudar a optimizar as suas finanças 
-              e proteger o seu futuro.
-            </p>
+              <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto text-background">
+                Agende uma consulta gratuita e descubra como podemos ajudar a optimizar a sua gestão 
+                contabilística e proteger o seu futuro com os melhores seguros.
+              </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild size="lg" variant="secondary">
                 <Link to="/contacto">
@@ -138,12 +141,12 @@ const Index = () => {
                   Marcar Consulta
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary-foreground/20 text-primary-foreground hover:bg-primary-foreground/10">
-                <a href="tel:+351XXXXXXX">
-                  <Phone className="mr-2 h-5 w-5" />
-                  +351 XXX XXX XXX
-                </a>
-              </Button>
+                <Button asChild size="lg" variant="outline" className="border-background/20 text-background hover:bg-background/10">
+                  <a href="tel:+351271571234">
+                    <Phone className="mr-2 h-5 w-5" />
+                    +351 271 571 234
+                  </a>
+                </Button>
             </div>
           </div>
         </section>
