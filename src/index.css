@@ -6,14 +6,14 @@
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 5%;
+    --background: 0 0% 3%;
+    --foreground: 45 100% 91%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 5%;
+    --card: 0 0% 8%;
+    --card-foreground: 45 100% 91%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 5%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 45 100% 91%;
 
     /* Elegant gold brand colors */
     --primary: 45 100% 51%;
@@ -22,28 +22,28 @@
     --primary-light: 48 100% 67%;
     --primary-dark: 42 100% 35%;
 
-    --secondary: 0 0% 96%;
+    --secondary: 45 100% 51%;
     --secondary-foreground: 0 0% 5%;
 
-    --muted: 0 0% 96%;
-    --muted-foreground: 0 0% 45%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 60%;
 
     --accent: 45 100% 51%;
     --accent-foreground: 0 0% 5%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 45 100% 91%;
 
-    --border: 0 0% 89%;
-    --input: 0 0% 89%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
     --ring: 45 100% 51%;
 
     /* Custom design tokens */
-    --hero-gradient: linear-gradient(135deg, hsl(0 0% 5%), hsl(0 0% 15%));
+    --hero-gradient: linear-gradient(135deg, hsl(0 0% 0%), hsl(0 0% 8%));
     --gold-gradient: linear-gradient(135deg, hsl(45 100% 51%), hsl(48 100% 67%));
-    --section-bg: 0 0% 97%;
-    --elegant-shadow: 0 10px 30px -10px hsl(0 0% 0% / 0.1);
-    --card-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.08);
+    --section-bg: 0 0% 5%;
+    --elegant-shadow: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
+    --card-shadow: 0 4px 20px -4px hsl(0 0% 0% / 0.2);
 
     --radius: 0.5rem;
 

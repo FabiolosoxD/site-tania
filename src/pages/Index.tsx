@@ -38,7 +38,7 @@ const Index = () => {
                 <Button asChild size="lg" variant="secondary">
                   <Link to="/contacto">Marcar Consulta Gratuita</Link>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-background/20 text-background hover:bg-background/10">
+                <Button asChild size="lg" className="border border-primary/30 bg-transparent text-primary hover:bg-primary/10 hover:border-primary">
                   <a href="tel:+351271571234">
                     <Phone className="mr-2 h-5 w-5" />
                     +351 271 571 234
@@ -50,7 +50,7 @@ const Index = () => {
         </section>
 
         {/* Services Section */}
-        <section className="py-20 bg-secondary/30">
+        <section className="py-20" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Os Nossos Serviços</h2>
@@ -141,7 +141,7 @@ const Index = () => {
                   Marcar Consulta
                 </Link>
               </Button>
-                <Button asChild size="lg" variant="outline" className="border-background/20 text-background hover:bg-background/10">
+                <Button asChild size="lg" className="border border-primary/30 bg-transparent text-primary hover:bg-primary/10 hover:border-primary">
                   <a href="tel:+351271571234">
                     <Phone className="mr-2 h-5 w-5" />
                     +351 271 571 234
