@@ -28,10 +28,10 @@ const Index = () => {
         <section className="bg-gradient-to-br from-foreground via-foreground to-muted-foreground text-background py-20" style={{background: 'var(--hero-gradient)'}}>
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-background">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
                 Gestão & Contabilidade de <span style={{background: 'var(--gold-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}} className="font-bold">Excelência</span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 opacity-90 text-background">
+              <p className="text-xl md:text-2xl mb-8 opacity-90 text-foreground">
                 Especialistas em gestão contabilística e seguros com autorização do Banco de Portugal
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -130,7 +130,7 @@ const Index = () => {
             <h2 className="text-4xl font-bold mb-6">
               Pronto para Começar?
             </h2>
-              <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto text-background">
+              <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto text-foreground">
                 Agende uma consulta gratuita e descubra como podemos ajudar a optimizar a sua gestão 
                 contabilística e proteger o seu futuro com os melhores seguros.
               </p>
