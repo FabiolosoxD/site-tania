@@ -34,8 +34,8 @@ const Contact = () => {
         {/* Hero Section */}
         <section className="py-16 text-background" style={{background: 'var(--hero-gradient)'}}>
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Entre em Contacto</h1>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Entre em Contacto</h1>
+            <p className="text-xl opacity-90 max-w-2xl mx-auto text-foreground">
               Pronto para simplificar a sua contabilidade e proteger o seu futuro com seguros adequados?
             </p>
           </div>

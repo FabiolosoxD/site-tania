@@ -127,7 +127,7 @@ const Index = () => {
         {/* CTA Section */}
         <section className="py-20 text-background" style={{background: 'var(--hero-gradient)'}}>
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-6">
+            <h2 className="text-4xl font-bold mb-6 text-foreground">
               Pronto para Começar?
             </h2>
               <p className="text-xl opacity-90 mb-8 max-w-2xl mx-auto text-foreground">
