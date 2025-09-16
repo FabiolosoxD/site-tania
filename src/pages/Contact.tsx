@@ -130,7 +130,11 @@ const Contact = () => {
                       <Phone className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <h3 className="font-semibold">Telefone</h3>
-                        <p className="text-muted-foreground">+351 271 571 234</p>
+                        <div className="text-muted-foreground">
+                          <p>+351 271 571 234</p>
+                          <p>+351 271 412 850</p>
+                          <p>+351 966 947 848</p>
+                        </div>
                       </div>
                     </div>
                     
@@ -138,10 +142,7 @@ const Contact = () => {
                       <Mail className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <h3 className="font-semibold">Email</h3>
-                        <div className="text-muted-foreground">
-                          <p>Geral: taniamendo83692@gmail.com</p>
-                          <p>Seguros: seguroscomalma@gmail.com</p>
-                        </div>
+                        <p className="text-muted-foreground">taniamendo83692@gmail.com</p>
                       </div>
                     </div>
                     

@@ -83,7 +83,7 @@ const Index = () => {
           </div>
           
           {/* Decorative geometric image */}
-          <div className="absolute bottom-0 left-0 w-64 h-64 opacity-20 pointer-events-none">
+          <div className="absolute bottom-0 left-0 w-64 h-64 opacity-20 pointer-events-none -z-10">
             <img 
               src={heroBgImg} 
               alt="" 
