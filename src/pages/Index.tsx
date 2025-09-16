@@ -11,25 +11,46 @@ const Index = () => {
       icon: Calculator,
       title: "Contabilidade e Fiscalidade",
       description: "Gestão completa da contabilidade e fiscalidade da sua empresa.",
-      features: ["Escrituração contabilística", "Declarações fiscais", "Planeamento fiscal"]
+      features: [
+        "Escrituração contabilística",
+        "Declarações fiscais (IVA, IRC, IRS)",
+        "Planeamento fiscal",
+        "Gestão de tesouraria",
+        "Contabilidade de custos / análises internas para melhoria de margens"
+      ]
     },
     {
       icon: TrendingUp,
       title: "Gestão e Consultoria",
-      description: "Apoio especializado na gestão operacional e financeira.",
-      features: ["Apoio à gestão", "Relatórios de desempenho", "Controlo de gestão & KPI's"]
+      description: "Apoio especializado na gestão operacional e financeira do seu negócio.",
+      features: [
+        "Apoio à gestão operacional e financeira",
+        "Relatórios de desempenho, orçamentos, forecasting",
+        "Controlo de gestão & KPI's",
+        "Recursos Humanos: processamento salarial, segurança social, gestão de colaboradores"
+      ]
     },
     {
       icon: Shield,
       title: "Seguros e Mediação de Risco",
-      description: "Proteja o seu património com as melhores soluções.",
-      features: ["Mediação de seguros", "Seguros empresariais", "Gestão de sinistros"]
+      description: "Proteja o seu património com as melhores soluções de seguros e gestão de risco.",
+      features: [
+        "Mediação de seguros para empresas e particulares (multirriscos, saúde, vida risco, responsabilidade civil, acidentes de trabalho, etc.)",
+        "Seguros de crédito, seguro de caução, seguro multirriscos empresariais",
+        "Análise e consultoria de risco para minimizar perdas (ex: clientes que pagam com atraso, incumprimentos)",
+        "Gestão de sinistros e acompanhamento de apólices"
+      ]
     },
     {
       icon: CreditCard,
       title: "Crédito / Intermediação Financeira",
-      description: "Facilitamos o acesso a crédito e soluções financeiras.",
-      features: ["Crédito habitação", "Intermediação de crédito", "Consultoria de crédito"]
+      description: "Facilitamos o acesso a crédito e soluções financeiras adaptadas às suas necessidades.",
+      features: [
+        "Crédito habitação, crédito ao consumo, crédito consolidado",
+        "Intermediação de crédito: atuar como intermediário entre cliente e instituições financeiras",
+        "Consultoria de crédito: avaliar as melhores opções de financiamento, custos, impacto no fluxo de caixa",
+        "Facilitar o acesso a crédito e soluções financeiras para empresas (operacional, capital de giro, financiamento para expansão)"
+      ]
     }
   ];
 
@@ -38,16 +59,8 @@ const Index = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-foreground via-foreground to-muted-foreground text-background py-20 overflow-hidden">
-          <div 
-            className="absolute inset-0 opacity-10 bg-center bg-no-repeat bg-cover"
-            style={{
-              backgroundImage: `url(${heroBgImg})`,
-              backgroundSize: 'cover',
-              backgroundPosition: 'center'
-            }}
-          />
-          <div className="relative z-10 container mx-auto px-4">
+        <section className="relative bg-gradient-to-br from-foreground via-foreground to-muted-foreground text-background py-20 overflow-hidden" style={{background: 'var(--hero-gradient)'}}>
+          <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
                 Gestão & Contabilidade de <span style={{background: 'var(--gold-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}} className="font-bold">Excelência</span>
@@ -67,6 +80,15 @@ const Index = () => {
                 </Button>
               </div>
             </div>
+          </div>
+          
+          {/* Decorative geometric image */}
+          <div className="absolute bottom-0 left-0 w-64 h-64 opacity-20 pointer-events-none">
+            <img 
+              src={heroBgImg} 
+              alt="" 
+              className="w-full h-full object-contain"
+            />
           </div>
         </section>
 
@@ -101,7 +123,7 @@ const Index = () => {
                       {service.features.map((feature, featureIndex) => (
                         <li key={featureIndex} className="flex items-start space-x-3">
                           <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-muted-foreground">{feature}</span>
+                          <span className="text-sm">{feature}</span>
                         </li>
                       ))}
                     </ul>
