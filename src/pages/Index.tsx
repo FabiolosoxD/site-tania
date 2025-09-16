@@ -60,7 +60,7 @@ const Index = () => {
       <main>
         {/* Hero Section */}
         <section className="relative bg-gradient-to-br from-foreground via-foreground to-muted-foreground text-background py-20 overflow-hidden" style={{background: 'var(--hero-gradient)'}}>
-          <div className="container mx-auto px-4">
+          <div className="relative z-10 container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
                 Gestão & Contabilidade de <span style={{background: 'var(--gold-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}} className="font-bold">Excelência</span>
@@ -83,7 +83,7 @@ const Index = () => {
           </div>
           
           {/* Decorative geometric image */}
-          <div className="absolute bottom-0 left-0 w-64 h-64 opacity-20 pointer-events-none -z-10">
+          <div className="absolute bottom-0 left-0 w-64 h-64 opacity-30 pointer-events-none">
             <img 
               src={heroBgImg} 
               alt="" 
