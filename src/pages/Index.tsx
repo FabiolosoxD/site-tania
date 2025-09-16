@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "react-router-dom";
 import { Calculator, Shield, Users, CheckCircle, Phone, Mail, TrendingUp, CreditCard } from "lucide-react";
 import Header from "@/components/Header";
+import heroBgImg from "@/assets/hero-bg.jpg";
 
 const Index = () => {
   const services = [
@@ -10,46 +11,25 @@ const Index = () => {
       icon: Calculator,
       title: "Contabilidade e Fiscalidade",
       description: "Gestão completa da contabilidade e fiscalidade da sua empresa.",
-      features: [
-        "Escrituração contabilística",
-        "Declarações fiscais (IVA, IRC, IRS)",
-        "Planeamento fiscal",
-        "Gestão de tesouraria",
-        "Contabilidade de custos / análises internas para melhoria de margens"
-      ]
+      features: ["Escrituração contabilística", "Declarações fiscais", "Planeamento fiscal"]
     },
     {
       icon: TrendingUp,
       title: "Gestão e Consultoria",
-      description: "Apoio especializado na gestão operacional e financeira do seu negócio.",
-      features: [
-        "Apoio à gestão operacional e financeira",
-        "Relatórios de desempenho, orçamentos, forecasting",
-        "Controlo de gestão & KPI's",
-        "Recursos Humanos: processamento salarial, segurança social, gestão de colaboradores"
-      ]
+      description: "Apoio especializado na gestão operacional e financeira.",
+      features: ["Apoio à gestão", "Relatórios de desempenho", "Controlo de gestão & KPI's"]
     },
     {
       icon: Shield,
       title: "Seguros e Mediação de Risco",
-      description: "Proteja o seu património com as melhores soluções de seguros e gestão de risco.",
-      features: [
-        "Mediação de seguros para empresas e particulares",
-        "Seguros de crédito, seguro de caução, seguro multirriscos empresariais",
-        "Análise e consultoria de risco para minimizar perdas",
-        "Gestão de sinistros e acompanhamento de apólices"
-      ]
+      description: "Proteja o seu património com as melhores soluções.",
+      features: ["Mediação de seguros", "Seguros empresariais", "Gestão de sinistros"]
     },
     {
       icon: CreditCard,
       title: "Crédito / Intermediação Financeira",
-      description: "Facilitamos o acesso a crédito e soluções financeiras adaptadas às suas necessidades.",
-      features: [
-        "Crédito habitação, crédito ao consumo, crédito consolidado",
-        "Intermediação de crédito entre cliente e instituições financeiras",
-        "Consultoria de crédito: avaliar as melhores opções de financiamento",
-        "Facilitar o acesso a crédito e soluções financeiras para empresas"
-      ]
+      description: "Facilitamos o acesso a crédito e soluções financeiras.",
+      features: ["Crédito habitação", "Intermediação de crédito", "Consultoria de crédito"]
     }
   ];
 
@@ -58,8 +38,16 @@ const Index = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-foreground via-foreground to-muted-foreground text-background py-20" style={{background: 'var(--hero-gradient)'}}>
-          <div className="container mx-auto px-4">
+        <section className="relative bg-gradient-to-br from-foreground via-foreground to-muted-foreground text-background py-20 overflow-hidden">
+          <div 
+            className="absolute inset-0 opacity-10 bg-center bg-no-repeat bg-cover"
+            style={{
+              backgroundImage: `url(${heroBgImg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center'
+            }}
+          />
+          <div className="relative z-10 container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
                 Gestão & Contabilidade de <span style={{background: 'var(--gold-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}} className="font-bold">Excelência</span>
@@ -92,28 +80,28 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
               {services.map((service, index) => (
-                <Card key={index} className="shadow-lg border-0 hover:shadow-xl transition-shadow duration-300">
-                  <CardHeader>
-                    <div className="flex items-center space-x-4">
-                      <div className="p-3 bg-primary/10 rounded-lg">
+                <Card key={index} className="group shadow-lg border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+                  <CardHeader className="pb-4">
+                    <div className="flex items-start space-x-4">
+                      <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
                         <service.icon className="h-8 w-8 text-primary" />
                       </div>
-                      <div>
-                        <CardTitle className="text-2xl">{service.title}</CardTitle>
-                        <CardDescription className="text-base">
+                      <div className="flex-1">
+                        <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
+                        <CardDescription className="text-base leading-relaxed">
                           {service.description}
                         </CardDescription>
                       </div>
                     </div>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
+                  <CardContent className="pt-0">
+                    <ul className="space-y-2">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center space-x-3">
-                          <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" />
-                          <span>{feature}</span>
+                        <li key={featureIndex} className="flex items-start space-x-3">
+                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
+                          <span className="text-sm text-muted-foreground">{feature}</span>
                         </li>
                       ))}
                     </ul>
