@@ -1,22 +1,55 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import { Calculator, Shield, Users, CheckCircle, Phone, Mail } from "lucide-react";
+import { Calculator, Shield, Users, CheckCircle, Phone, Mail, TrendingUp, CreditCard } from "lucide-react";
 import Header from "@/components/Header";
 
 const Index = () => {
   const services = [
     {
       icon: Calculator,
-      title: "Contabilidade",
-      description: "Gestão completa da contabilidade da sua empresa com rigor e transparência.",
-      features: ["Escrituração contabilística", "Declarações fiscais", "Relatórios mensais", "Consultoria fiscal"]
+      title: "Contabilidade e Fiscalidade",
+      description: "Gestão completa da contabilidade e fiscalidade da sua empresa.",
+      features: [
+        "Escrituração contabilística",
+        "Declarações fiscais (IVA, IRC, IRS)",
+        "Planeamento fiscal",
+        "Gestão de tesouraria",
+        "Contabilidade de custos / análises internas para melhoria de margens"
+      ]
+    },
+    {
+      icon: TrendingUp,
+      title: "Gestão e Consultoria",
+      description: "Apoio especializado na gestão operacional e financeira do seu negócio.",
+      features: [
+        "Apoio à gestão operacional e financeira",
+        "Relatórios de desempenho, orçamentos, forecasting",
+        "Controlo de gestão & KPI's",
+        "Recursos Humanos: processamento salarial, segurança social, gestão de colaboradores"
+      ]
     },
     {
       icon: Shield,
-      title: "Seguros",
-      description: "Proteja o seu património e futuro com as melhores soluções de seguros.",
-      features: ["Seguros de vida", "Seguros automóveis", "Seguros de habitação", "Seguros empresariais"]
+      title: "Seguros e Mediação de Risco",
+      description: "Proteja o seu património com as melhores soluções de seguros e gestão de risco.",
+      features: [
+        "Mediação de seguros para empresas e particulares",
+        "Seguros de crédito, seguro de caução, seguro multirriscos empresariais",
+        "Análise e consultoria de risco para minimizar perdas",
+        "Gestão de sinistros e acompanhamento de apólices"
+      ]
+    },
+    {
+      icon: CreditCard,
+      title: "Crédito / Intermediação Financeira",
+      description: "Facilitamos o acesso a crédito e soluções financeiras adaptadas às suas necessidades.",
+      features: [
+        "Crédito habitação, crédito ao consumo, crédito consolidado",
+        "Intermediação de crédito entre cliente e instituições financeiras",
+        "Consultoria de crédito: avaliar as melhores opções de financiamento",
+        "Facilitar o acesso a crédito e soluções financeiras para empresas"
+      ]
     }
   ];
 
@@ -32,7 +65,7 @@ const Index = () => {
                 Gestão & Contabilidade de <span style={{background: 'var(--gold-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}} className="font-bold">Excelência</span>
               </h1>
               <p className="text-xl md:text-2xl mb-8 opacity-90 text-foreground">
-                Especialistas em gestão contabilística e seguros com autorização do Banco de Portugal
+                Especialista em gestão, contabilidade, seguros e intermediação de crédito com autorização do Banco de Portugal
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" variant="secondary">
@@ -59,7 +92,7 @@ const Index = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
               {services.map((service, index) => (
                 <Card key={index} className="shadow-lg border-0 hover:shadow-xl transition-shadow duration-300">
                   <CardHeader>
