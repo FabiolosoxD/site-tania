@@ -34,8 +34,8 @@ const Contact = () => {
         {/* Hero Section */}
         <section className="py-16 text-background" style={{background: 'var(--hero-gradient)'}}>
           <div className="container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">Entre em Contacto</h1>
-            <p className="text-xl opacity-90 max-w-2xl mx-auto">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Entre em Contacto</h1>
+            <p className="text-xl opacity-90 max-w-2xl mx-auto text-foreground">
               Pronto para simplificar a sua contabilidade e proteger o seu futuro com seguros adequados?
             </p>
           </div>
@@ -84,9 +84,10 @@ const Contact = () => {
                           required
                         >
                           <option value="">Selecione um serviço</option>
-                          <option value="contabilidade">Contabilidade</option>
-                          <option value="seguros">Seguros</option>
-                          <option value="ambos">Contabilidade e Seguros</option>
+                          <option value="contabilidade-fiscalidade">Contabilidade e Fiscalidade</option>
+                          <option value="gestao-consultoria">Gestão e Consultoria</option>
+                          <option value="seguros-mediacao">Seguros e Mediação de Risco</option>
+                          <option value="credito-intermediacao">Crédito / Intermediação Financeira</option>
                           <option value="outro">Outro</option>
                         </select>
                       </div>
@@ -130,7 +131,11 @@ const Contact = () => {
                       <Phone className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <h3 className="font-semibold">Telefone</h3>
-                        <p className="text-muted-foreground">+351 271 571 234</p>
+                        <div className="text-muted-foreground">
+                          <p>+351 271 571 234</p>
+                          <p>+351 271 412 850</p>
+                          <p>+351 966 947 848</p>
+                        </div>
                       </div>
                     </div>
                     
@@ -138,10 +143,7 @@ const Contact = () => {
                       <Mail className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <h3 className="font-semibold">Email</h3>
-                        <div className="text-muted-foreground">
-                          <p>Geral: taniamendo83692@gmail.com</p>
-                          <p>Seguros: seguroscomalma@gmail.com</p>
-                        </div>
+                        <p className="text-muted-foreground">geral@taniamendo.pt</p>
                       </div>
                     </div>
                     
@@ -150,9 +152,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold">Horário de Funcionamento</h3>
                         <div className="text-muted-foreground">
-                          <p>Segunda a Sexta: 09:00 - 18:00</p>
-                          <p>Sábado: 09:00 - 13:00</p>
-                          <p>Domingo: Fechado</p>
+                          <p>Segunda a Sexta: 09:00 - 12:30 | 13:30 - 18:00</p>
+                          <p>Fim de semana: Fechado</p>
                         </div>
                       </div>
                     </div>
@@ -166,7 +167,6 @@ const Contact = () => {
                       <li>✓ Mais de 10 anos de experiência</li>
                       <li>✓ Atendimento personalizado</li>
                       <li>✓ Consultoria especializada</li>
-                      <li>✓ Primeira consulta gratuita</li>
                     </ul>
                   </CardContent>
                 </Card>
