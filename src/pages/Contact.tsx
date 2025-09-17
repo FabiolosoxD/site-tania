@@ -84,9 +84,10 @@ const Contact = () => {
                           required
                         >
                           <option value="">Selecione um serviço</option>
-                          <option value="contabilidade">Contabilidade</option>
-                          <option value="seguros">Seguros</option>
-                          <option value="ambos">Contabilidade e Seguros</option>
+                          <option value="contabilidade-fiscalidade">Contabilidade e Fiscalidade</option>
+                          <option value="gestao-consultoria">Gestão e Consultoria</option>
+                          <option value="seguros-mediacao">Seguros e Mediação de Risco</option>
+                          <option value="credito-intermediacao">Crédito / Intermediação Financeira</option>
                           <option value="outro">Outro</option>
                         </select>
                       </div>
