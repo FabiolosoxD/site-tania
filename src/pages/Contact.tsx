@@ -152,9 +152,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold">Horário de Funcionamento</h3>
                         <div className="text-muted-foreground">
-                          <p>Segunda a Sexta: 09:00 - 18:00</p>
-                          <p>Sábado: 09:00 - 13:00</p>
-                          <p>Domingo: Fechado</p>
+                          <p>Segunda a Sexta: 09:00 - 12:30 | 13:30 - 18:00</p>
+                          <p>Fim de semana: Fechado</p>
                         </div>
                       </div>
                     </div>
@@ -168,7 +167,6 @@ const Contact = () => {
                       <li>✓ Mais de 10 anos de experiência</li>
                       <li>✓ Atendimento personalizado</li>
                       <li>✓ Consultoria especializada</li>
-                      <li>✓ Primeira consulta gratuita</li>
                     </ul>
                   </CardContent>
                 </Card>
