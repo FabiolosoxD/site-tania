@@ -46,7 +46,7 @@ const Header = () => {
             </div>
             <div className="flex items-center space-x-1">
               <Mail className="h-4 w-4" />
-              <span>taniamendo83692@gmail.com</span>
+              <span>geral@taniamendo.pt</span>
             </div>
           </div>
           <Button asChild>
