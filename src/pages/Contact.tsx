@@ -119,7 +119,7 @@ const Contact = () => {
                         <Textarea
                           id="message"
                           name="message"
-                          placeholder="Descreva brevemente as suas necessidades..."
+                          placeholder="Descreva brevemente o assunto da reunião..."
                           className="min-h-[100px]"
                         />
                       </div>
