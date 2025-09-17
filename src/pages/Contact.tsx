@@ -12,18 +12,39 @@ const Contact = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Mensagem enviada com sucesso!",
-      description: "Entraremos em contacto consigo brevemente.",
-    });
-    
+
+    const formData = new FormData(e.currentTarget);
+
+    try {
+      const response = await fetch("/send-mail.php", {
+        method: "POST",
+        body: formData,
+      });
+
+      if (response.ok) {
+        toast({
+          title: "Mensagem enviada com sucesso!",
+          description: "Entraremos em contacto consigo brevemente.",
+        });
+        e.currentTarget.reset();
+      } else {
+        toast({
+          title: "Erro ao enviar mensagem.",
+          description: "Por favor tente novamente mais tarde.",
+          variant: "destructive",
+        });
+      }
+    } catch (error) {
+      toast({
+        title: "Erro de rede.",
+        description: "Não foi possível contactar o servidor.",
+        variant: "destructive",
+      });
+    }
+
     setIsSubmitting(false);
   };
 
@@ -32,7 +53,7 @@ const Contact = () => {
       <Header />
       <main className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="py-16 text-background" style={{background: 'var(--hero-gradient)'}}>
+        <section className="py-16 text-background" style={{ background: "var(--hero-gradient)" }}>
           <div className="container mx-auto px-4 text-center">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">Entre em Contacto</h1>
             <p className="text-xl opacity-90 max-w-2xl mx-auto text-foreground">
@@ -58,28 +79,29 @@ const Contact = () => {
                       <div className="grid grid-cols-2 gap-4">
                         <div className="space-y-2">
                           <Label htmlFor="firstName">Nome</Label>
-                          <Input id="firstName" placeholder="João" required />
+                          <Input id="firstName" name="firstName" placeholder="João" required />
                         </div>
                         <div className="space-y-2">
                           <Label htmlFor="lastName">Apelido</Label>
-                          <Input id="lastName" placeholder="Silva" required />
+                          <Input id="lastName" name="lastName" placeholder="Silva" required />
                         </div>
                       </div>
-                      
+
                       <div className="space-y-2">
                         <Label htmlFor="email">Email</Label>
-                        <Input id="email" type="email" placeholder="joao@example.com" required />
+                        <Input id="email" name="email" type="email" placeholder="joao@example.com" required />
                       </div>
-                      
+
                       <div className="space-y-2">
                         <Label htmlFor="phone">Telefone</Label>
-                        <Input id="phone" type="tel" placeholder="+351 XXX XXX XXX" required />
+                        <Input id="phone" name="phone" type="tel" placeholder="+351 XXX XXX XXX" required />
                       </div>
-                      
+
                       <div className="space-y-2">
                         <Label htmlFor="service">Serviço de Interesse</Label>
-                        <select 
-                          id="service" 
+                        <select
+                          id="service"
+                          name="subject"
                           className="w-full p-2 border border-input rounded-md bg-background"
                           required
                         >
@@ -91,16 +113,17 @@ const Contact = () => {
                           <option value="outro">Outro</option>
                         </select>
                       </div>
-                      
+
                       <div className="space-y-2">
                         <Label htmlFor="message">Mensagem</Label>
-                        <Textarea 
-                          id="message" 
-                          placeholder="Descreva brevemente as suas necessidades..."
+                        <Textarea
+                          id="message"
+                          name="message"
+                          placeholder="Descreva brevemente o assunto da reunião..."
                           className="min-h-[100px]"
                         />
                       </div>
-                      
+
                       <Button type="submit" className="w-full" disabled={isSubmitting}>
                         {isSubmitting ? "A enviar..." : "Enviar Mensagem"}
                       </Button>
@@ -113,7 +136,7 @@ const Contact = () => {
               <div className="space-y-6">
                 <div>
                   <h2 className="text-2xl font-bold mb-6">Informações de Contacto</h2>
-                  
+
                   <div className="space-y-4">
                     <div className="flex items-start space-x-3">
                       <MapPin className="h-5 w-5 text-primary mt-1" />
@@ -126,7 +149,7 @@ const Contact = () => {
                         </p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start space-x-3">
                       <Phone className="h-5 w-5 text-primary mt-1" />
                       <div>
@@ -138,7 +161,7 @@ const Contact = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start space-x-3">
                       <Mail className="h-5 w-5 text-primary mt-1" />
                       <div>
@@ -146,7 +169,7 @@ const Contact = () => {
                         <p className="text-muted-foreground">geral@taniamendo.pt</p>
                       </div>
                     </div>
-                    
+
                     <div className="flex items-start space-x-3">
                       <Clock className="h-5 w-5 text-primary mt-1" />
                       <div>
