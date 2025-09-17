@@ -19,7 +19,7 @@ const Contact = () => {
     const formData = new FormData(e.currentTarget);
 
     try {
-      const response = await fetch("https://taniamendo.pt/send-mail.php", {
+      const response = await fetch("/send-mail.php", {
         method: "POST",
         body: formData,
       });
@@ -32,20 +32,20 @@ const Contact = () => {
         e.currentTarget.reset();
       } else {
         toast({
-          title: "Erro ao enviar mensagem",
-          description: "Tente novamente mais tarde.",
+          title: "Erro ao enviar mensagem.",
+          description: "Por favor tente novamente mais tarde.",
           variant: "destructive",
         });
       }
     } catch (error) {
       toast({
-        title: "Erro de ligação",
+        title: "Erro de rede.",
         description: "Não foi possível contactar o servidor.",
         variant: "destructive",
       });
-    } finally {
-      setIsSubmitting(false);
     }
+
+    setIsSubmitting(false);
   };
 
   return (
@@ -101,14 +101,15 @@ const Contact = () => {
                         <Label htmlFor="service">Serviço de Interesse</Label>
                         <select
                           id="service"
-                          name="service"
+                          name="subject"
                           className="w-full p-2 border border-input rounded-md bg-background"
                           required
                         >
                           <option value="">Selecione um serviço</option>
-                          <option value="contabilidade">Contabilidade</option>
-                          <option value="seguros">Seguros</option>
-                          <option value="ambos">Contabilidade e Seguros</option>
+                          <option value="contabilidade-fiscalidade">Contabilidade e Fiscalidade</option>
+                          <option value="gestao-consultoria">Gestão e Consultoria</option>
+                          <option value="seguros-mediacao">Seguros e Mediação de Risco</option>
+                          <option value="credito-intermediacao">Crédito / Intermediação Financeira</option>
                           <option value="outro">Outro</option>
                         </select>
                       </div>
@@ -142,10 +143,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold">Morada</h3>
                         <p className="text-muted-foreground">
-                          Quinta da Granja N.º13 1ºDrt
-                          <br />
-                          6350-226 Almeida
-                          <br />
+                          Quinta da Granja N.º13 1ºDrt<br />
+                          6350-226 Almeida<br />
                           Portugal
                         </p>
                       </div>
@@ -167,7 +166,7 @@ const Contact = () => {
                       <Mail className="h-5 w-5 text-primary mt-1" />
                       <div>
                         <h3 className="font-semibold">Email</h3>
-                        <p className="text-muted-foreground">taniamendo83692@gmail.com</p>
+                        <p className="text-muted-foreground">geral@taniamendo.pt</p>
                       </div>
                     </div>
 
@@ -176,9 +175,8 @@ const Contact = () => {
                       <div>
                         <h3 className="font-semibold">Horário de Funcionamento</h3>
                         <div className="text-muted-foreground">
-                          <p>Segunda a Sexta: 09:00 - 18:00</p>
-                          <p>Sábado: 09:00 - 13:00</p>
-                          <p>Domingo: Fechado</p>
+                          <p>Segunda a Sexta: 09:00 - 12:30 | 13:30 - 18:00</p>
+                          <p>Fim de semana: Fechado</p>
                         </div>
                       </div>
                     </div>
@@ -192,7 +190,6 @@ const Contact = () => {
                       <li>✓ Mais de 10 anos de experiência</li>
                       <li>✓ Atendimento personalizado</li>
                       <li>✓ Consultoria especializada</li>
-                      <li>✓ Primeira consulta gratuita</li>
                     </ul>
                   </CardContent>
                 </Card>
