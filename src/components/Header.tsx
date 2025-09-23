@@ -28,6 +28,42 @@ const Header = () => {
           >
             Início
           </Link>
+          
+          {/* Services Dropdown */}
+          <div className="relative group">
+            <button className="font-medium text-muted-foreground hover:text-primary transition-colors cursor-pointer">
+              Serviços
+            </button>
+            <div className="absolute top-full left-0 mt-2 w-64 bg-background border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <div className="py-2">
+                <Link
+                  to="/servicos/contabilidade"
+                  className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                >
+                  Contabilidade e Fiscalidade
+                </Link>
+                <Link
+                  to="/servicos/gestao"
+                  className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                >
+                  Gestão e Consultoria
+                </Link>
+                <Link
+                  to="/servicos/seguros"
+                  className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                >
+                  Seguros e Mediação
+                </Link>
+                <Link
+                  to="/servicos/credito"
+                  className="block px-4 py-2 text-sm text-foreground hover:bg-accent hover:text-accent-foreground transition-colors"
+                >
+                  Crédito e Financiamento
+                </Link>
+              </div>
+            </div>
+          </div>
+
           <Link
             to="/contacto"
             className={`font-medium transition-colors hover:text-primary ${

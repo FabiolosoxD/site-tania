@@ -96,40 +96,105 @@ const Index = () => {
         <section className="py-20" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-4">Os Nossos Serviços</h2>
+              <h2 className="text-4xl font-bold mb-4">Como Podemos Ajudar</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Oferecemos soluções completas e personalizadas para particulares e empresas
+                Exemplos práticos dos nossos serviços mais procurados
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-              {services.map((service, index) => (
-                <Card key={index} className="group shadow-lg border-0 hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                  <CardHeader className="pb-4">
-                    <div className="flex items-start space-x-4">
-                      <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                        <service.icon className="h-8 w-8 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <CardTitle className="text-xl mb-2">{service.title}</CardTitle>
-                        <CardDescription className="text-base leading-relaxed">
-                          {service.description}
-                        </CardDescription>
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent className="pt-0">
-                    <ul className="space-y-2">
-                      {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-start space-x-3">
-                          <CheckCircle className="h-4 w-4 text-primary flex-shrink-0 mt-0.5" />
-                          <span className="text-sm">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1" style={{boxShadow: 'var(--shadow-elegant)'}}>
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <Calculator className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Abertura de Empresa</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-center">
+                    Criação completa da sua empresa, desde a constituição até à primeira declaração fiscal.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1" style={{boxShadow: 'var(--shadow-elegant)'}}>
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <CreditCard className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Simulação de Crédito</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-center">
+                    Análise gratuita das melhores opções de crédito habitação, pessoal ou empresarial.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1" style={{boxShadow: 'var(--shadow-elegant)'}}>
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <Shield className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Simulação de Seguro</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-center">
+                    Comparação de seguros auto, habitação, saúde e vida para encontrar a melhor proteção.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1" style={{boxShadow: 'var(--shadow-elegant)'}}>
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <TrendingUp className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Relatórios Financeiros</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-center">
+                    Análises mensais de desempenho e indicadores para melhorar a gestão da sua empresa.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1" style={{boxShadow: 'var(--shadow-elegant)'}}>
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <Users className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Processamento Salarial</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-center">
+                    Gestão completa de salários, segurança social e obrigações laborais.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+
+              <Card className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1" style={{boxShadow: 'var(--shadow-elegant)'}}>
+                <CardHeader className="text-center">
+                  <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-primary/20 transition-colors">
+                    <Phone className="h-8 w-8 text-primary" />
+                  </div>
+                  <CardTitle className="text-lg">Apoio Fiscal Urgente</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-center">
+                    Resolução rápida de questões fiscais e apoio em inspeções da autoridade tributária.
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="text-center mt-12">
+              <p className="text-muted-foreground mb-6">
+                Estes são apenas alguns exemplos. Oferecemos soluções completas em todas as áreas.
+              </p>
+              <Button asChild size="lg">
+                <Link to="/contacto">Ver Todos os Serviços</Link>
+              </Button>
             </div>
           </div>
         </section>
