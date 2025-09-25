@@ -171,7 +171,7 @@ const Seguros = () => {
                   Solicitar Simulação
                 </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-primary">
+              <Button asChild size="lg" variant="white-outline">
                 <a href="tel:+351271571234">
                   <Phone className="mr-2 h-5 w-5" />
                   +351 271 571 234

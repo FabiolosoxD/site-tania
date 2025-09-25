@@ -74,7 +74,7 @@ const Index = () => {
                 <Button asChild size="lg" variant="secondary">
                   <Link to="/contacto">Marcar Consulta Gratuita</Link>
                 </Button>
-                <Button asChild size="lg" className="bg-primary text-white border-2 border-primary hover:bg-primary/90 hover:border-primary">
+                <Button asChild size="lg" variant="gold-outline">
                   <a href="tel:+351271571234">
                     <Phone className="mr-2 h-5 w-5" />
                     +351 271 571 234
@@ -98,7 +98,7 @@ const Index = () => {
         <section className="py-20 relative" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
           {/* Background Image */}
           <div 
-            className="absolute inset-0 opacity-5 bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 opacity-15 bg-cover bg-center bg-no-repeat"
             style={{backgroundImage: `url(${bgOffice})`}}
           ></div>
           <div className="relative z-10 container mx-auto px-4">
@@ -210,7 +210,7 @@ const Index = () => {
         <section className="py-20 relative">
           {/* Background Image */}
           <div 
-            className="absolute inset-0 opacity-5 bg-cover bg-center bg-no-repeat"
+            className="absolute inset-0 opacity-15 bg-cover bg-center bg-no-repeat"
             style={{backgroundImage: `url(${bgFinancial})`}}
           ></div>
           <div className="relative z-10 container mx-auto px-4">
@@ -261,7 +261,7 @@ const Index = () => {
                   Marcar Consulta
                 </Link>
               </Button>
-                <Button asChild size="lg" className="bg-primary text-white border-2 border-primary hover:bg-primary/90 hover:border-primary">
+                <Button asChild size="lg" variant="white-outline">
                   <a href="tel:+351271571234">
                     <Phone className="mr-2 h-5 w-5" />
                     +351 271 571 234

@@ -33,9 +33,10 @@
     --radius: 0.75rem;
 
     /* Custom Design Tokens - Light & Elegant */
-    --hero-gradient: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(240, 4.8%, 95.9%) 50%, hsl(240, 5.9%, 90%) 100%);
+    --hero-gradient: linear-gradient(135deg, hsl(45, 93%, 47%) 0%, hsl(40, 85%, 55%) 50%, hsl(35, 80%, 60%) 100%);
     --gold-gradient: linear-gradient(135deg, hsl(45, 93%, 47%) 0%, hsl(40, 85%, 55%) 100%);
-    --section-bg: 240 4.8% 97.9%;
+    --nav-bg: 45 93% 47%;
+    --section-bg: 45 15% 96%;
     --glass-bg: 0 0% 100%;
     --glass-border: 240 5.9% 90%;
     --shadow-elegant: 0 10px 30px -10px hsl(240 10% 3.9% / 0.1);
