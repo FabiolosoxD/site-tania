@@ -1,15 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
 import Header from "@/components/Header";
 
 const Contact = () => {
-  const { toast } = useToast();
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -25,24 +25,12 @@ const Contact = () => {
       });
 
       if (response.ok) {
-        toast({
-          title: "Mensagem enviada com sucesso!",
-          description: "Entraremos em contacto consigo brevemente.",
-        });
-        e.currentTarget.reset();
+        navigate("/contacto/sucesso");
       } else {
-        toast({
-          title: "Erro ao enviar mensagem.",
-          description: "Por favor tente novamente mais tarde.",
-          variant: "destructive",
-        });
+        navigate("/contacto/erro");
       }
     } catch (error) {
-      toast({
-        title: "Erro de rede.",
-        description: "Não foi possível contactar o servidor.",
-        variant: "destructive",
-      });
+      navigate("/contacto/erro");
     }
 
     setIsSubmitting(false);

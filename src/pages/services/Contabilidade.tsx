@@ -3,43 +3,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "react-router-dom";
 import { Calculator, CheckCircle, Phone, Mail, FileText, PieChart, Receipt, TrendingUp } from "lucide-react";
 import Header from "@/components/Header";
+import bgAccounting from "@/assets/bg-accounting.jpg";
 
 const Contabilidade = () => {
   return (
     <>
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-background to-secondary/20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary rounded-2xl mb-6" style={{boxShadow: 'var(--shadow-gold)'}}>
-                <Calculator className="h-10 w-10 text-white" />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Contabilidade e <span style={{background: 'var(--gold-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>Fiscalidade</span>
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Gestão completa da contabilidade e fiscalidade da sua empresa com rigor, transparência e expertise.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg">
-                  <Link to="/contacto">Solicitar Orçamento</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                  <a href="tel:+351271571234">
-                    <Phone className="mr-2 h-5 w-5" />
-                    +351 271 571 234
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Services Details */}
-        <section className="py-20" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
-          <div className="container mx-auto px-4">
+        <section className="py-20 relative" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 opacity-5 bg-cover bg-center bg-no-repeat"
+            style={{backgroundImage: `url(${bgAccounting})`}}
+          ></div>
+          <div className="relative z-10 container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
               <div>
                 <h2 className="text-3xl font-bold mb-6">Serviços Completos de Contabilidade</h2>

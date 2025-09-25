@@ -9,33 +9,6 @@ const Credito = () => {
     <>
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-background to-secondary/20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary rounded-2xl mb-6" style={{boxShadow: 'var(--shadow-gold)'}}>
-                <CreditCard className="h-10 w-10 text-white" />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Crédito e <span style={{background: 'var(--gold-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>Financiamento</span>
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Facilitamos o acesso a crédito com soluções financeiras adaptadas às suas necessidades específicas.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg">
-                  <Link to="/contacto">Solicitar Simulação</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                  <a href="tel:+351271571234">
-                    <Phone className="mr-2 h-5 w-5" />
-                    +351 271 571 234
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Authorization Badge */}
         <section className="py-12 bg-primary/5">

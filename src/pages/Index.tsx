@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { Calculator, Shield, Users, CheckCircle, Phone, Mail, TrendingUp, CreditCard } from "lucide-react";
 import Header from "@/components/Header";
 import heroBgImg from "@/assets/hero-bg.jpg";
+import bgOffice from "@/assets/bg-office.jpg";
+import bgFinancial from "@/assets/bg-financial.jpg";
 
 const Index = () => {
   const services = [
@@ -72,7 +74,7 @@ const Index = () => {
                 <Button asChild size="lg" variant="secondary">
                   <Link to="/contacto">Marcar Consulta Gratuita</Link>
                 </Button>
-                <Button asChild size="lg" className="border border-primary/30 bg-transparent text-primary hover:bg-primary/10 hover:border-primary">
+                <Button asChild size="lg" className="bg-primary text-white border-2 border-primary hover:bg-primary/90 hover:border-primary">
                   <a href="tel:+351271571234">
                     <Phone className="mr-2 h-5 w-5" />
                     +351 271 571 234
@@ -93,8 +95,13 @@ const Index = () => {
         </section>
 
         {/* Services Section */}
-        <section className="py-20" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
-          <div className="container mx-auto px-4">
+        <section className="py-20 relative" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 opacity-5 bg-cover bg-center bg-no-repeat"
+            style={{backgroundImage: `url(${bgOffice})`}}
+          ></div>
+          <div className="relative z-10 container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-4">Como Podemos Ajudar</h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -200,8 +207,13 @@ const Index = () => {
         </section>
 
         {/* About Section */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        <section className="py-20 relative">
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 opacity-5 bg-cover bg-center bg-no-repeat"
+            style={{backgroundImage: `url(${bgFinancial})`}}
+          ></div>
+          <div className="relative z-10 container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <Users className="h-16 w-16 text-primary mx-auto mb-6" />
               <h2 className="text-4xl font-bold mb-6">Sobre a Tânia Mendo Lda</h2>
@@ -249,7 +261,7 @@ const Index = () => {
                   Marcar Consulta
                 </Link>
               </Button>
-                <Button asChild size="lg" className="border border-primary/30 bg-transparent text-primary hover:bg-primary/10 hover:border-primary">
+                <Button asChild size="lg" className="bg-primary text-white border-2 border-primary hover:bg-primary/90 hover:border-primary">
                   <a href="tel:+351271571234">
                     <Phone className="mr-2 h-5 w-5" />
                     +351 271 571 234

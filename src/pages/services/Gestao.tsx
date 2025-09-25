@@ -3,43 +3,22 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "react-router-dom";
 import { TrendingUp, CheckCircle, Phone, Mail, BarChart3, Target, Users, Briefcase } from "lucide-react";
 import Header from "@/components/Header";
+import bgFinancial from "@/assets/bg-financial.jpg";
 
 const Gestao = () => {
   return (
     <>
       <Header />
       <main>
-        {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-background to-secondary/20">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-primary rounded-2xl mb-6" style={{boxShadow: 'var(--shadow-gold)'}}>
-                <TrendingUp className="h-10 w-10 text-white" />
-              </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Gestão e <span style={{background: 'var(--gold-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}}>Consultoria</span>
-              </h1>
-              <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                Apoio especializado na gestão operacional e financeira do seu negócio para maximizar resultados.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg">
-                  <Link to="/contacto">Solicitar Consultoria</Link>
-                </Button>
-                <Button asChild size="lg" variant="outline">
-                  <a href="tel:+351271571234">
-                    <Phone className="mr-2 h-5 w-5" />
-                    +351 271 571 234
-                  </a>
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
 
         {/* Services Details */}
-        <section className="py-20" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
-          <div className="container mx-auto px-4">
+        <section className="py-20 relative" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 opacity-5 bg-cover bg-center bg-no-repeat"
+            style={{backgroundImage: `url(${bgFinancial})`}}
+          ></div>
+          <div className="relative z-10 container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
               <div>
                 <h2 className="text-3xl font-bold mb-6">Consultoria Empresarial Especializada</h2>
