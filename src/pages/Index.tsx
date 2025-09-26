@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Link } from "react-router-dom";
 import { Calculator, Shield, Users, CheckCircle, Phone, Mail, TrendingUp, CreditCard } from "lucide-react";
 import Header from "@/components/Header";
-import heroBgImg from "@/assets/hero-bg.jpg";
+import heroBgImg from "@/assets/hero-business.jpg";
 import bgOffice from "@/assets/bg-office.jpg";
 import bgFinancial from "@/assets/bg-financial.jpg";
 
@@ -61,20 +61,26 @@ const Index = () => {
       <Header />
       <main>
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-foreground via-foreground to-muted-foreground text-background py-20 overflow-hidden" style={{background: 'var(--hero-gradient)'}}>
+        <section className="relative py-20 overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{backgroundImage: `url(${heroBgImg})`}}
+          ></div>
+          <div className="absolute inset-0 bg-black/60"></div>
           <div className="relative z-10 container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-foreground">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                 Gestão & Contabilidade de <span style={{background: 'var(--gold-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}} className="font-bold">Excelência</span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 opacity-90 text-foreground">
+              <p className="text-xl md:text-2xl mb-8 opacity-90 text-white">
                 Especialista em gestão, contabilidade, seguros e intermediação de crédito com autorização do Banco de Portugal
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" variant="secondary">
                   <Link to="/contacto">Marcar Consulta Gratuita</Link>
                 </Button>
-                <Button asChild size="lg" variant="gold-outline">
+                <Button asChild size="lg" variant="white-outline">
                   <a href="tel:+351271571234">
                     <Phone className="mr-2 h-5 w-5" />
                     +351 271 571 234
@@ -82,15 +88,6 @@ const Index = () => {
                 </Button>
               </div>
             </div>
-          </div>
-          
-          {/* Decorative geometric image */}
-          <div className="absolute bottom-0 left-0 w-40 h-40 opacity-20 pointer-events-none z-0">
-            <img 
-              src={heroBgImg} 
-              alt="" 
-              className="w-full h-full object-cover"
-            />
           </div>
         </section>
 
