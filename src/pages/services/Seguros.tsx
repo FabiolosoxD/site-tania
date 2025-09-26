@@ -173,7 +173,7 @@ const Seguros = () => {
               <Button asChild size="lg" variant="secondary">
                 <Link to="/contacto">
                   <Mail className="mr-2 h-5 w-5" />
-                  Solicitar Simulação
+                  Marcar Consulta
                 </Link>
               </Button>
               <Button asChild size="lg" variant="white-outline">

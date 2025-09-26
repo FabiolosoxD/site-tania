@@ -10,16 +10,6 @@ const Credito = () => {
       <Header />
       <main>
 
-        {/* Authorization Badge */}
-        <section className="py-12" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
-          <div className="container mx-auto px-4 text-center">
-            <div className="inline-flex items-center space-x-3 bg-background px-6 py-3 rounded-full shadow-lg">
-              <div className="w-3 h-3 bg-primary rounded-full"></div>
-              <span className="bp-intermediary-text font-medium">Intermediação de crédito por Tânia dos Santos Mendo com o nº de registo no BdP 0007771</span>
-            </div>
-          </div>
-        </section>
-
         {/* Services Details */}
         <section className="py-20 relative" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
           {/* Background Image */}
@@ -28,6 +18,14 @@ const Credito = () => {
             style={{backgroundImage: `url(/src/assets/bg-accounting.jpg)`}}
           ></div>
           <div className="relative z-10 container mx-auto px-4">
+            
+            {/* Authorization Badge */}
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center space-x-3 bg-background px-6 py-3 rounded-full shadow-lg mb-8">
+                <div className="w-3 h-3 bg-primary rounded-full"></div>
+                <span className="bp-intermediary-text font-medium">Intermediação de crédito por Tânia dos Santos Mendo com o nº de registo no BdP 0007771</span>
+              </div>
+            </div>
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
               <div>
                 <h2 className="text-3xl font-bold mb-6">Soluções de Crédito Personalizadas</h2>
@@ -234,7 +232,7 @@ const Credito = () => {
               <Button asChild size="lg" variant="secondary">
                 <Link to="/contacto">
                   <Mail className="mr-2 h-5 w-5" />
-                  Solicitar Simulação
+                  Marcar Consulta
                 </Link>
               </Button>
               <Button asChild size="lg" variant="white-outline">
