@@ -98,4 +98,10 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Bank of Portugal intermediary text requirements */
+  .bp-intermediary-text {
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+  }
 }

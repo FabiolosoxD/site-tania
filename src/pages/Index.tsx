@@ -78,7 +78,7 @@ const Index = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" variant="secondary">
-                  <Link to="/contacto">Marcar Consulta Gratuita</Link>
+                  <Link to="/contacto">Marcar Reunião</Link>
                 </Button>
                 <Button asChild size="lg" variant="white-outline">
                   <a href="tel:+351271571234">
@@ -192,14 +192,6 @@ const Index = () => {
               </Card>
             </div>
 
-            <div className="text-center mt-12">
-              <p className="text-muted-foreground mb-6">
-                Estes são apenas alguns exemplos. Oferecemos soluções completas em todas as áreas.
-              </p>
-              <Button asChild size="lg">
-                <Link to="/contacto">Ver Todos os Serviços</Link>
-              </Button>
-            </div>
           </div>
         </section>
 
@@ -215,12 +207,11 @@ const Index = () => {
               <Users className="h-16 w-16 text-primary mx-auto mb-6" />
               <h2 className="text-4xl font-bold mb-6">Sobre a Tânia Mendo Lda</h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Intermediária de Crédito autorizada pelo Banco de Portugal nº 007771, a Tânia Mendo Lda é a sua 
-                parceira de confiança para todas as necessidades de gestão contabilística e seguros. Oferecemos 
+                Tânia Mendo Lda é a sua parceira de confiança para todas as necessidades de gestão contabilística e seguros. Oferecemos 
                 um atendimento personalizado e especializado, garantindo que cada cliente recebe as melhores 
                 soluções para o seu perfil específico.
               </p>
-              <p className="text-sm text-muted-foreground mb-4 font-medium">
+              <p className="bp-intermediary-text text-muted-foreground mb-4 font-medium">
                 Intermediária Crédito autorizada pelo Banco de Portugal n° 007771
               </p>
               <div className="grid md:grid-cols-3 gap-8 mt-12">
@@ -255,7 +246,7 @@ const Index = () => {
               <Button asChild size="lg" variant="secondary">
                 <Link to="/contacto">
                   <Mail className="mr-2 h-5 w-5" />
-                  Marcar Consulta
+                  Marcar Reunião
                 </Link>
               </Button>
                 <Button asChild size="lg" variant="white-outline">
