@@ -11,18 +11,23 @@ const Credito = () => {
       <main>
 
         {/* Authorization Badge */}
-        <section className="py-12 bg-primary/5">
+        <section className="py-12" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
           <div className="container mx-auto px-4 text-center">
             <div className="inline-flex items-center space-x-3 bg-background px-6 py-3 rounded-full shadow-lg">
               <div className="w-3 h-3 bg-primary rounded-full"></div>
-              <span className="text-sm font-medium">Intermediária de Crédito autorizada pelo Banco de Portugal nº 007771</span>
+              <span className="bp-intermediary-text font-medium">Intermediação de crédito por Tânia dos Santos Mendo com o nº de registo no BdP 0007771</span>
             </div>
           </div>
         </section>
 
         {/* Services Details */}
-        <section className="py-20" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
-          <div className="container mx-auto px-4">
+        <section className="py-20 relative" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 opacity-30 bg-cover bg-center bg-no-repeat"
+            style={{backgroundImage: `url(/src/assets/bg-accounting.jpg)`}}
+          ></div>
+          <div className="relative z-10 container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
               <div>
                 <h2 className="text-3xl font-bold mb-6">Soluções de Crédito Personalizadas</h2>
@@ -174,8 +179,13 @@ const Credito = () => {
         </section>
 
         {/* Benefits Section */}
-        <section className="py-20" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
-          <div className="container mx-auto px-4">
+        <section className="py-20 relative" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 opacity-20 bg-cover bg-center bg-no-repeat"
+            style={{backgroundImage: `url(/src/assets/bg-office.jpg)`}}
+          ></div>
+          <div className="relative z-10 container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-4">Vantagens de Trabalhar Connosco</h2>
             </div>

@@ -73,8 +73,11 @@ const Index = () => {
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                 Gestão & Contabilidade de <span style={{background: 'var(--gold-gradient)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text'}} className="font-bold">Excelência</span>
               </h1>
-              <p className="text-xl md:text-2xl mb-8 opacity-90 text-white">
+              <p className="text-xl md:text-2xl mb-4 opacity-90 text-white">
                 Especialista em gestão, contabilidade, seguros e intermediação de crédito com autorização do Banco de Portugal
+              </p>
+              <p className="bp-intermediary-text text-white/80 mb-8 font-medium">
+                Intermediação de crédito por Tânia dos Santos Mendo com o nº de registo no BdP 0007771
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" variant="secondary">

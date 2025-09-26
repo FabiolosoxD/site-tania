@@ -11,8 +11,13 @@ const Seguros = () => {
       <main>
 
         {/* Services Details */}
-        <section className="py-20" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
-          <div className="container mx-auto px-4">
+        <section className="py-20 relative" style={{backgroundColor: 'hsl(var(--section-bg))'}}>
+          {/* Background Image */}
+          <div 
+            className="absolute inset-0 opacity-30 bg-cover bg-center bg-no-repeat"
+            style={{backgroundImage: `url(/src/assets/bg-financial.jpg)`}}
+          ></div>
+          <div className="relative z-10 container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
               <div>
                 <h2 className="text-3xl font-bold mb-6">Proteção Completa para Si e Sua Empresa</h2>
